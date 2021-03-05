@@ -1,0 +1,2296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.5 on win32)" generated="20210305 09:07:16.170" rpa="false">
+<suite id="s1" name="RobotTests" source="C:\Users\5983r\PycharmProjects\pythonProject\RobotTests">
+<suite id="s1-s1" name="Tests" source="C:\Users\5983r\PycharmProjects\pythonProject\RobotTests\Tests">
+<suite id="s1-s1-s1" name="TestCases" source="C:\Users\5983r\PycharmProjects\pythonProject\RobotTests\Tests\TestCases.robot">
+<test id="s1-s1-s1-t1" name="TC01_RenewContract-Positive">
+<kw name="Open Browser And Login to Salesforce" library="Keywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SalesForce_URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:16.397" level="INFO">Opening browser 'Chrome' to base url 'https://login.salesforce.com'.</msg>
+<status status="PASS" starttime="20210305 09:07:16.397" endtime="20210305 09:07:21.955"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210305 09:07:21.955" endtime="20210305 09:07:22.121"></status>
+</kw>
+<kw name="Login Into Salesforce" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:22.121" endtime="20210305 09:07:22.193"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:22.195" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20210305 09:07:22.194" endtime="20210305 09:07:23.127"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_Loc}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:23.127" level="INFO">Typing text 'Vlocity1234' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210305 09:07:23.127" endtime="20210305 09:07:23.413"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:23.413" level="INFO">Clicking element '//input[@id='Login']'.</msg>
+<status status="PASS" starttime="20210305 09:07:23.413" endtime="20210305 09:07:26.000"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:22.121" endtime="20210305 09:07:26.000"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:16.396" endtime="20210305 09:07:26.000"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${Term}</var>
+</assign>
+<msg timestamp="20210305 09:07:26.004" level="INFO">${Term} = 12</msg>
+<status status="PASS" starttime="20210305 09:07:26.004" endtime="20210305 09:07:26.004"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Draft</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<msg timestamp="20210305 09:07:26.007" level="INFO">${Status} = Draft</msg>
+<status status="PASS" starttime="20210305 09:07:26.006" endtime="20210305 09:07:26.007"></status>
+</kw>
+<kw name="Go To Account Page" library="Keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${Account_URL}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:26.008" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
+<status status="PASS" starttime="20210305 09:07:26.008" endtime="20210305 09:07:32.640"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Account}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:32.640" endtime="20210305 09:07:34.598"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:26.008" endtime="20210305 09:07:34.598"></status>
+</kw>
+<kw name="Click on Renew Contract" library="Keywords">
+<doc>Click Renew Contract and validate the page loaded</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:34.598" endtime="20210305 09:07:44.113"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:44.113" level="INFO">Selecting frame '//iframe[@id='iFrameResizer0']'.</msg>
+<status status="PASS" starttime="20210305 09:07:44.113" endtime="20210305 09:07:44.157"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:44.157" endtime="20210305 09:07:45.953"></status>
+</kw>
+<msg timestamp="20210305 09:07:45.953" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:07:44.157" endtime="20210305 09:07:45.953"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:07:45.953" level="INFO">${element_xpath} = //a[contains(.,'Renew Contract')]</msg>
+<status status="PASS" starttime="20210305 09:07:45.953" endtime="20210305 09:07:45.953"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:07:45.953" level="INFO">Executing JavaScript:
+document.evaluate("//a[contains(.,'Renew Contract')]", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:07:45.953" endtime="20210305 09:07:46.107"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:07:47.121" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:07:46.107" endtime="20210305 09:07:47.121"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:45.953" endtime="20210305 09:07:47.121"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:07:47.121" endtime="20210305 09:07:47.128"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:47.130" endtime="20210305 09:07:47.150"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:47.150" level="INFO">Selecting frame '//iframe[@id='iFrameResizer1']'.</msg>
+<status status="PASS" starttime="20210305 09:07:47.150" endtime="20210305 09:07:47.359"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:47.359" endtime="20210305 09:07:50.612"></status>
+</kw>
+<msg timestamp="20210305 09:07:50.612" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:07:47.359" endtime="20210305 09:07:50.612"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Log to Console</arg>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:50.612" endtime="20210305 09:07:50.612"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:50.612" endtime="20210305 09:07:50.612"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:34.598" endtime="20210305 09:07:50.612"></status>
+</kw>
+<kw name="Fill Contract Form" library="Keywords">
+<doc>Fill all required details to create contract with passed term and Status Value. If correct Values are passed next page will be loaded. Else Error will be thrown.</doc>
+<arguments>
+<arg>${Term}</arg>
+<arg>${Status}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//select[@name='loopname']/option[@value='${Term}']</arg>
+</arguments>
+<assign>
+<var>${Term_Value}</var>
+</assign>
+<msg timestamp="20210305 09:07:50.612" level="INFO">${Term_Value} = //select[@name='loopname']/option[@value='12']</msg>
+<status status="PASS" starttime="20210305 09:07:50.612" endtime="20210305 09:07:50.612"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+</arguments>
+<assign>
+<var>${Status_Loc}</var>
+</assign>
+<msg timestamp="20210305 09:07:50.620" level="INFO">${Status_Loc} = //input[@value='Draft']</msg>
+<status status="PASS" starttime="20210305 09:07:50.620" endtime="20210305 09:07:50.620"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:50.620" endtime="20210305 09:07:50.662"></status>
+</kw>
+<msg timestamp="20210305 09:07:50.662" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:07:50.620" endtime="20210305 09:07:50.662"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:07:50.671" level="INFO">${element_xpath} = //input[@id='ContractName']</msg>
+<status status="PASS" starttime="20210305 09:07:50.662" endtime="20210305 09:07:50.671"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:07:50.671" level="INFO">Executing JavaScript:
+document.evaluate("//input[@id='ContractName']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:07:50.671" endtime="20210305 09:07:50.679"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:07:51.691" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:07:50.679" endtime="20210305 09:07:51.691"></status>
+</kw>
+<msg timestamp="20210305 09:07:51.691" level="INFO">${status} = None</msg>
+<status status="PASS" starttime="20210305 09:07:50.662" endtime="20210305 09:07:51.691"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>${ContractName}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:51.691" level="INFO">Typing text 'Test_Contract' into text field '//input[@id='ContractName']'.</msg>
+<status status="PASS" starttime="20210305 09:07:51.691" endtime="20210305 09:07:51.830"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:51.830" level="INFO">Clicking element '//select[@name='loopname']'.</msg>
+<status status="PASS" starttime="20210305 09:07:51.830" endtime="20210305 09:07:52.051"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Value}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:52.051" level="INFO">Clicking element '//select[@name='loopname']/option[@value='12']'.</msg>
+<status status="PASS" starttime="20210305 09:07:52.051" endtime="20210305 09:07:52.114"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:52.114" endtime="20210305 09:07:52.151"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${Status_Loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:07:52.159" level="INFO">${element_xpath} = //input[@value='Draft']</msg>
+<status status="PASS" starttime="20210305 09:07:52.159" endtime="20210305 09:07:52.159"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:07:52.159" level="INFO">Executing JavaScript:
+document.evaluate("//input[@value='Draft']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:07:52.159" endtime="20210305 09:07:52.178"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:07:53.188" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:07:52.178" endtime="20210305 09:07:53.189"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:52.159" endtime="20210305 09:07:53.189"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Done_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:53.189" level="INFO">Clicking element '//p[text()='Done']'.</msg>
+<status status="PASS" starttime="20210305 09:07:53.189" endtime="20210305 09:07:53.310"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait until element is visible</arg>
+<arg>${Error_loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Error_loc}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:07:58.832" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:07:58.431" endtime="20210305 09:07:58.832"></status>
+</kw>
+<msg timestamp="20210305 09:07:58.832" level="FAIL">Element '//p[text()='Error : Please fix all the fields with errors.']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210305 09:07:53.310" endtime="20210305 09:07:58.832"></status>
+</kw>
+<msg timestamp="20210305 09:07:58.832" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20210305 09:07:53.310" endtime="20210305 09:07:58.832"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Error Validation</arg>
+<arg>ELSE</arg>
+<arg>Validate Contract</arg>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Validate Contract" library="Keywords">
+<doc>Validate Contract Created</doc>
+<arguments>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:07:58.832" endtime="20210305 09:07:58.842"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ContractNumber_Loc}</arg>
+</arguments>
+<assign>
+<var>${Contract_Number}</var>
+</assign>
+<msg timestamp="20210305 09:07:58.880" level="INFO">${Contract_Number} = 00000210</msg>
+<status status="PASS" starttime="20210305 09:07:58.843" endtime="20210305 09:07:58.880"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Account_Loc}</arg>
+</arguments>
+<assign>
+<var>${Validate_Account}</var>
+</assign>
+<msg timestamp="20210305 09:07:58.904" level="INFO">${Validate_Account} = John Smith</msg>
+<status status="PASS" starttime="20210305 09:07:58.880" endtime="20210305 09:07:58.904"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Status_Loc}</arg>
+</arguments>
+<assign>
+<var>${Validate_Status}</var>
+</assign>
+<msg timestamp="20210305 09:07:58.942" level="INFO">${Validate_Status} = Draft</msg>
+<status status="PASS" starttime="20210305 09:07:58.904" endtime="20210305 09:07:58.942"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Term_Loc}</arg>
+</arguments>
+<assign>
+<var>${Validate_Term}</var>
+</assign>
+<msg timestamp="20210305 09:07:58.978" level="INFO">${Validate_Term} = 12</msg>
+<status status="PASS" starttime="20210305 09:07:58.942" endtime="20210305 09:07:58.978"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contract Number Is ${Contract_Number}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:58.978" level="INFO">Contract Number Is 00000210</msg>
+<status status="PASS" starttime="20210305 09:07:58.978" endtime="20210305 09:07:58.978"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:07:59.352" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:07:58.978" endtime="20210305 09:07:59.352"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Validate_Account}</arg>
+<arg>${Account}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:07:59.352" endtime="20210305 09:07:59.352"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contract is created for account ${Validate_Account}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.352" level="INFO">Contract is created for account John Smith</msg>
+<status status="PASS" starttime="20210305 09:07:59.352" endtime="20210305 09:07:59.352"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Validate_Status_Loc}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.352" level="INFO">Verifying element '//span[@title='Status']//following::span[1]' contains exact text 'Draft'.</msg>
+<status status="PASS" starttime="20210305 09:07:59.352" endtime="20210305 09:07:59.377"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Status of the Contract is ${Validate_Status}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.378" level="INFO">Status of the Contract is Draft</msg>
+<status status="PASS" starttime="20210305 09:07:59.378" endtime="20210305 09:07:59.378"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Validate_Term_Loc}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.378" level="INFO">Verifying element '//span[@title='Contract Term (months)']//following::span[1]' contains exact text '12'.</msg>
+<status status="PASS" starttime="20210305 09:07:59.378" endtime="20210305 09:07:59.407"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contract Term is ${Validate_Term}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.407" level="INFO">Contract Term is 12</msg>
+<status status="PASS" starttime="20210305 09:07:59.407" endtime="20210305 09:07:59.407"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:58.832" endtime="20210305 09:07:59.407"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:58.832" endtime="20210305 09:07:59.407"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:50.612" endtime="20210305 09:07:59.407"></status>
+</kw>
+<kw name="Logout and Close Browser" library="Keywords" type="teardown">
+<doc>General logout keyword for test teardowns</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${User_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.424" level="INFO">Current page contains element '//img[@title='User']'.</msg>
+<status status="PASS" starttime="20210305 09:07:59.407" endtime="20210305 09:07:59.424"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${User_loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:07:59.424" level="INFO">${element_xpath} = //img[@title='User']</msg>
+<status status="PASS" starttime="20210305 09:07:59.424" endtime="20210305 09:07:59.424"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:07:59.424" level="INFO">Executing JavaScript:
+document.evaluate("//img[@title='User']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:07:59.424" endtime="20210305 09:07:59.459"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:08:00.459" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:07:59.459" endtime="20210305 09:08:00.459"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:59.424" endtime="20210305 09:08:00.459"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${logout_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:00.459" level="INFO">Clicking element '//div[@class='profile-card-indent']/div/a[2]'.</msg>
+<status status="PASS" starttime="20210305 09:08:00.459" endtime="20210305 09:08:00.595"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210305 09:08:00.596" endtime="20210305 09:08:03.318"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:07:59.407" endtime="20210305 09:08:03.318"></status>
+</kw>
+<doc>Renew Contract with draft status and term 1 year and validate the contract created in draft sttaus</doc>
+<tags>
+<tag>Task</tag>
+</tags>
+<status status="PASS" starttime="20210305 09:07:16.395" endtime="20210305 09:08:03.318" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="TC02_RenewContract-ErrorValidation">
+<kw name="Open Browser And Login to Salesforce" library="Keywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SalesForce_URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:03.318" level="INFO">Opening browser 'Chrome' to base url 'https://login.salesforce.com'.</msg>
+<status status="PASS" starttime="20210305 09:08:03.318" endtime="20210305 09:08:07.737"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210305 09:08:07.737" endtime="20210305 09:08:07.872"></status>
+</kw>
+<kw name="Login Into Salesforce" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:07.877" endtime="20210305 09:08:07.922"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:07.922" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20210305 09:08:07.922" endtime="20210305 09:08:08.246"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_Loc}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:08.246" level="INFO">Typing text 'Vlocity1234' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210305 09:08:08.246" endtime="20210305 09:08:08.390"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:08.390" level="INFO">Clicking element '//input[@id='Login']'.</msg>
+<status status="PASS" starttime="20210305 09:08:08.390" endtime="20210305 09:08:11.170"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:07.877" endtime="20210305 09:08:11.170"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:03.318" endtime="20210305 09:08:11.170"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>24</arg>
+</arguments>
+<assign>
+<var>${Term}</var>
+</assign>
+<msg timestamp="20210305 09:08:11.170" level="INFO">${Term} = 24</msg>
+<status status="PASS" starttime="20210305 09:08:11.170" endtime="20210305 09:08:11.170"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Signed</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
+<msg timestamp="20210305 09:08:11.170" level="INFO">${Status} = Signed</msg>
+<status status="PASS" starttime="20210305 09:08:11.170" endtime="20210305 09:08:11.170"></status>
+</kw>
+<kw name="Go To Account Page" library="Keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${Account_URL}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:11.178" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
+<status status="PASS" starttime="20210305 09:08:11.178" endtime="20210305 09:08:19.064"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Account}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:19.064" endtime="20210305 09:08:21.074"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:11.170" endtime="20210305 09:08:21.074"></status>
+</kw>
+<kw name="Click on Renew Contract" library="Keywords">
+<doc>Click Renew Contract and validate the page loaded</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:21.074" endtime="20210305 09:08:40.496"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:40.496" level="INFO">Selecting frame '//iframe[@id='iFrameResizer0']'.</msg>
+<status status="PASS" starttime="20210305 09:08:40.496" endtime="20210305 09:08:40.545"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:40.545" endtime="20210305 09:08:40.585"></status>
+</kw>
+<msg timestamp="20210305 09:08:40.585" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:08:40.545" endtime="20210305 09:08:40.585"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:08:40.585" level="INFO">${element_xpath} = //a[contains(.,'Renew Contract')]</msg>
+<status status="PASS" starttime="20210305 09:08:40.585" endtime="20210305 09:08:40.585"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:08:40.585" level="INFO">Executing JavaScript:
+document.evaluate("//a[contains(.,'Renew Contract')]", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:08:40.585" endtime="20210305 09:08:40.598"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:08:41.612" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:08:40.598" endtime="20210305 09:08:41.612"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:40.585" endtime="20210305 09:08:41.612"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:08:41.612" endtime="20210305 09:08:41.612"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:41.612" endtime="20210305 09:08:41.636"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:41.636" level="INFO">Selecting frame '//iframe[@id='iFrameResizer1']'.</msg>
+<status status="PASS" starttime="20210305 09:08:41.636" endtime="20210305 09:08:42.425"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:42.425" endtime="20210305 09:08:48.455"></status>
+</kw>
+<msg timestamp="20210305 09:08:48.455" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:08:42.425" endtime="20210305 09:08:48.455"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Log to Console</arg>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:48.455" endtime="20210305 09:08:48.455"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:48.455" endtime="20210305 09:08:48.455"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:21.074" endtime="20210305 09:08:48.455"></status>
+</kw>
+<kw name="Fill Contract Form" library="Keywords">
+<doc>Fill all required details to create contract with passed term and Status Value. If correct Values are passed next page will be loaded. Else Error will be thrown.</doc>
+<arguments>
+<arg>${Term}</arg>
+<arg>${Status}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//select[@name='loopname']/option[@value='${Term}']</arg>
+</arguments>
+<assign>
+<var>${Term_Value}</var>
+</assign>
+<msg timestamp="20210305 09:08:48.455" level="INFO">${Term_Value} = //select[@name='loopname']/option[@value='24']</msg>
+<status status="PASS" starttime="20210305 09:08:48.455" endtime="20210305 09:08:48.455"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+</arguments>
+<assign>
+<var>${Status_Loc}</var>
+</assign>
+<msg timestamp="20210305 09:08:48.455" level="INFO">${Status_Loc} = //input[@value='Signed']</msg>
+<status status="PASS" starttime="20210305 09:08:48.455" endtime="20210305 09:08:48.455"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:48.463" endtime="20210305 09:08:48.503"></status>
+</kw>
+<msg timestamp="20210305 09:08:48.503" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:08:48.463" endtime="20210305 09:08:48.503"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:08:48.503" level="INFO">${element_xpath} = //input[@id='ContractName']</msg>
+<status status="PASS" starttime="20210305 09:08:48.503" endtime="20210305 09:08:48.503"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:08:48.503" level="INFO">Executing JavaScript:
+document.evaluate("//input[@id='ContractName']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:08:48.503" endtime="20210305 09:08:48.503"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:08:49.510" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:08:48.503" endtime="20210305 09:08:49.510"></status>
+</kw>
+<msg timestamp="20210305 09:08:49.510" level="INFO">${status} = None</msg>
+<status status="PASS" starttime="20210305 09:08:48.503" endtime="20210305 09:08:49.510"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>${ContractName}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:49.510" level="INFO">Typing text 'Test_Contract' into text field '//input[@id='ContractName']'.</msg>
+<status status="PASS" starttime="20210305 09:08:49.510" endtime="20210305 09:08:49.648"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:49.648" level="INFO">Clicking element '//select[@name='loopname']'.</msg>
+<status status="PASS" starttime="20210305 09:08:49.648" endtime="20210305 09:08:49.833"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Value}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:49.837" level="INFO">Clicking element '//select[@name='loopname']/option[@value='24']'.</msg>
+<status status="PASS" starttime="20210305 09:08:49.833" endtime="20210305 09:08:49.897"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:49.897" endtime="20210305 09:08:49.960"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${Status_Loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:08:49.960" level="INFO">${element_xpath} = //input[@value='Signed']</msg>
+<status status="PASS" starttime="20210305 09:08:49.960" endtime="20210305 09:08:49.960"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:08:49.960" level="INFO">Executing JavaScript:
+document.evaluate("//input[@value='Signed']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:08:49.960" endtime="20210305 09:08:49.983"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:08:50.998" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:08:49.983" endtime="20210305 09:08:50.998"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:49.960" endtime="20210305 09:08:50.998"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Done_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:50.998" level="INFO">Clicking element '//p[text()='Done']'.</msg>
+<status status="PASS" starttime="20210305 09:08:50.998" endtime="20210305 09:08:51.121"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait until element is visible</arg>
+<arg>${Error_loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Error_loc}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:08:51.121" endtime="20210305 09:08:52.070"></status>
+</kw>
+<msg timestamp="20210305 09:08:52.070" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:08:51.121" endtime="20210305 09:08:52.070"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Error Validation</arg>
+<arg>ELSE</arg>
+<arg>Validate Contract</arg>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Error Validation" library="Keywords">
+<doc>Validate the error thrown while creating contract</doc>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Error_loc}</arg>
+</arguments>
+<assign>
+<var>${Error}</var>
+</assign>
+<msg timestamp="20210305 09:08:52.101" level="INFO">${Error} = Error : Please fix all the fields with errors.</msg>
+<status status="PASS" starttime="20210305 09:08:52.070" endtime="20210305 09:08:52.101"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Error}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:52.101" level="INFO">Error : Please fix all the fields with errors.</msg>
+<status status="PASS" starttime="20210305 09:08:52.101" endtime="20210305 09:08:52.101"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:08:52.481" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:08:52.102" endtime="20210305 09:08:52.481"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${alert-ok-button_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:52.481" level="INFO">Clicking element '//button[@id='alert-ok-button']'.</msg>
+<status status="PASS" starttime="20210305 09:08:52.481" endtime="20210305 09:08:52.592"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${error_message_loc}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:52.592" level="INFO">Verifying element '//div[@class='error']/small' contains exact text 'Choose a valid contract status and save your changes. Ask your admin for details.'.</msg>
+<status status="PASS" starttime="20210305 09:08:52.592" endtime="20210305 09:08:52.628"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${error_message_loc}</arg>
+</arguments>
+<assign>
+<var>${Validate Error Message}</var>
+</assign>
+<msg timestamp="20210305 09:08:52.653" level="INFO">${Validate Error Message} = Choose a valid contract status and save your changes. Ask your admin for details.</msg>
+<status status="PASS" starttime="20210305 09:08:52.628" endtime="20210305 09:08:52.653"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Error message is "${Validate Error Message}"</arg>
+</arguments>
+<msg timestamp="20210305 09:08:52.653" level="INFO">Error message is "Choose a valid contract status and save your changes. Ask your admin for details."</msg>
+<status status="PASS" starttime="20210305 09:08:52.653" endtime="20210305 09:08:52.653"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:08:53.043" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:08:52.653" endtime="20210305 09:08:53.043"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:08:53.043" endtime="20210305 09:08:53.043"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:52.070" endtime="20210305 09:08:53.043"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:52.070" endtime="20210305 09:08:53.043"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:48.455" endtime="20210305 09:08:53.043"></status>
+</kw>
+<kw name="Logout and Close Browser" library="Keywords" type="teardown">
+<doc>General logout keyword for test teardowns</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${User_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:53.068" level="INFO">Current page contains element '//img[@title='User']'.</msg>
+<status status="PASS" starttime="20210305 09:08:53.043" endtime="20210305 09:08:53.068"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${User_loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:08:53.068" level="INFO">${element_xpath} = //img[@title='User']</msg>
+<status status="PASS" starttime="20210305 09:08:53.068" endtime="20210305 09:08:53.068"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:08:53.068" level="INFO">Executing JavaScript:
+document.evaluate("//img[@title='User']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:08:53.068" endtime="20210305 09:08:53.101"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:08:54.115" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:08:53.101" endtime="20210305 09:08:54.115"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:53.068" endtime="20210305 09:08:54.115"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${logout_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:54.115" level="INFO">Clicking element '//div[@class='profile-card-indent']/div/a[2]'.</msg>
+<status status="PASS" starttime="20210305 09:08:54.115" endtime="20210305 09:08:54.239"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210305 09:08:54.242" endtime="20210305 09:08:56.923"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:53.043" endtime="20210305 09:08:56.923"></status>
+</kw>
+<doc>Renew Contract with Status Draft and Term 2 years and validate the error</doc>
+<tags>
+<tag>Task</tag>
+</tags>
+<status status="PASS" starttime="20210305 09:08:03.318" endtime="20210305 09:08:56.923" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="TC03_RenewContract">
+<kw name="Open Browser And Login to Salesforce" library="Keywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SalesForce_URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210305 09:08:56.923" level="INFO">Opening browser 'Chrome' to base url 'https://login.salesforce.com'.</msg>
+<status status="PASS" starttime="20210305 09:08:56.923" endtime="20210305 09:09:02.084"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210305 09:09:02.084" endtime="20210305 09:09:02.219"></status>
+</kw>
+<kw name="Login Into Salesforce" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:02.219" endtime="20210305 09:09:02.313"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UserName_Loc}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:02.315" level="INFO">Typing text 'taniya.dey-1452066749@vlocityapps.com' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20210305 09:09:02.314" endtime="20210305 09:09:03.166"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_Loc}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:03.166" level="INFO">Typing text 'Vlocity1234' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20210305 09:09:03.166" endtime="20210305 09:09:03.605"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Login_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:03.605" level="INFO">Clicking element '//input[@id='Login']'.</msg>
+<status status="PASS" starttime="20210305 09:09:03.605" endtime="20210305 09:09:03.714"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:02.219" endtime="20210305 09:09:03.714"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:08:56.923" endtime="20210305 09:09:03.714"></status>
+</kw>
+<kw name="Renew Contract" library="Keywords">
+<doc>Complete Renew Contract flow to use in data driven template</doc>
+<arguments>
+<arg>12</arg>
+<arg>Draft</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Starting Test case with term ${Term} and Contract Status ${Contract_status}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:03.721" endtime="20210305 09:09:03.722"></status>
+</kw>
+<kw name="Go To Account Page" library="Keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${Account_URL}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:03.722" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
+<status status="PASS" starttime="20210305 09:09:03.722" endtime="20210305 09:09:13.806"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Account}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:13.806" endtime="20210305 09:09:14.276"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:03.722" endtime="20210305 09:09:14.276"></status>
+</kw>
+<kw name="Click on Renew Contract" library="Keywords">
+<doc>Click Renew Contract and validate the page loaded</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:14.276" endtime="20210305 09:09:22.045"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:22.045" level="INFO">Selecting frame '//iframe[@id='iFrameResizer0']'.</msg>
+<status status="PASS" starttime="20210305 09:09:22.045" endtime="20210305 09:09:22.111"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:22.111" endtime="20210305 09:09:23.914"></status>
+</kw>
+<msg timestamp="20210305 09:09:23.914" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:22.111" endtime="20210305 09:09:23.914"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:23.914" level="INFO">${element_xpath} = //a[contains(.,'Renew Contract')]</msg>
+<status status="PASS" starttime="20210305 09:09:23.914" endtime="20210305 09:09:23.914"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:23.914" level="INFO">Executing JavaScript:
+document.evaluate("//a[contains(.,'Renew Contract')]", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:23.914" endtime="20210305 09:09:23.980"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:24.984" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:23.980" endtime="20210305 09:09:24.984"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:23.914" endtime="20210305 09:09:24.984"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:09:24.984" endtime="20210305 09:09:24.991"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:24.991" endtime="20210305 09:09:25.009"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:25.009" level="INFO">Selecting frame '//iframe[@id='iFrameResizer1']'.</msg>
+<status status="PASS" starttime="20210305 09:09:25.009" endtime="20210305 09:09:25.588"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:25.588" endtime="20210305 09:09:28.907"></status>
+</kw>
+<msg timestamp="20210305 09:09:28.907" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:25.588" endtime="20210305 09:09:28.907"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Log to Console</arg>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:28.907" endtime="20210305 09:09:28.907"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:28.907" endtime="20210305 09:09:28.907"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:14.276" endtime="20210305 09:09:28.907"></status>
+</kw>
+<kw name="Fill Contract Form" library="Keywords">
+<doc>Fill all required details to create contract with passed term and Status Value. If correct Values are passed next page will be loaded. Else Error will be thrown.</doc>
+<arguments>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//select[@name='loopname']/option[@value='${Term}']</arg>
+</arguments>
+<assign>
+<var>${Term_Value}</var>
+</assign>
+<msg timestamp="20210305 09:09:28.907" level="INFO">${Term_Value} = //select[@name='loopname']/option[@value='12']</msg>
+<status status="PASS" starttime="20210305 09:09:28.907" endtime="20210305 09:09:28.907"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+</arguments>
+<assign>
+<var>${Status_Loc}</var>
+</assign>
+<msg timestamp="20210305 09:09:28.907" level="INFO">${Status_Loc} = //input[@value='Draft']</msg>
+<status status="PASS" starttime="20210305 09:09:28.907" endtime="20210305 09:09:28.907"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:28.915" endtime="20210305 09:09:28.951"></status>
+</kw>
+<msg timestamp="20210305 09:09:28.951" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:28.907" endtime="20210305 09:09:28.951"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:28.951" level="INFO">${element_xpath} = //input[@id='ContractName']</msg>
+<status status="PASS" starttime="20210305 09:09:28.951" endtime="20210305 09:09:28.951"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:28.951" level="INFO">Executing JavaScript:
+document.evaluate("//input[@id='ContractName']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:28.951" endtime="20210305 09:09:28.961"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:29.969" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:28.961" endtime="20210305 09:09:29.969"></status>
+</kw>
+<msg timestamp="20210305 09:09:29.969" level="INFO">${status} = None</msg>
+<status status="PASS" starttime="20210305 09:09:28.951" endtime="20210305 09:09:29.969"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>${ContractName}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:29.969" level="INFO">Typing text 'Test_Contract' into text field '//input[@id='ContractName']'.</msg>
+<status status="PASS" starttime="20210305 09:09:29.969" endtime="20210305 09:09:30.105"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:30.105" level="INFO">Clicking element '//select[@name='loopname']'.</msg>
+<status status="PASS" starttime="20210305 09:09:30.105" endtime="20210305 09:09:30.336"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Value}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:30.336" level="INFO">Clicking element '//select[@name='loopname']/option[@value='12']'.</msg>
+<status status="PASS" starttime="20210305 09:09:30.336" endtime="20210305 09:09:30.401"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:30.401" endtime="20210305 09:09:30.441"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${Status_Loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:30.449" level="INFO">${element_xpath} = //input[@value='Draft']</msg>
+<status status="PASS" starttime="20210305 09:09:30.449" endtime="20210305 09:09:30.449"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:30.449" level="INFO">Executing JavaScript:
+document.evaluate("//input[@value='Draft']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:30.449" endtime="20210305 09:09:30.468"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:31.478" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:30.468" endtime="20210305 09:09:31.479"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:30.441" endtime="20210305 09:09:31.479"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Done_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:31.479" level="INFO">Clicking element '//p[text()='Done']'.</msg>
+<status status="PASS" starttime="20210305 09:09:31.479" endtime="20210305 09:09:31.635"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait until element is visible</arg>
+<arg>${Error_loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Error_loc}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:09:37.315" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:09:36.870" endtime="20210305 09:09:37.315"></status>
+</kw>
+<msg timestamp="20210305 09:09:37.315" level="FAIL">Element '//p[text()='Error : Please fix all the fields with errors.']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210305 09:09:31.635" endtime="20210305 09:09:37.315"></status>
+</kw>
+<msg timestamp="20210305 09:09:37.315" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20210305 09:09:31.635" endtime="20210305 09:09:37.315"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Error Validation</arg>
+<arg>ELSE</arg>
+<arg>Validate Contract</arg>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Validate Contract" library="Keywords">
+<doc>Validate Contract Created</doc>
+<arguments>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:09:37.315" endtime="20210305 09:09:37.325"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ContractNumber_Loc}</arg>
+</arguments>
+<assign>
+<var>${Contract_Number}</var>
+</assign>
+<msg timestamp="20210305 09:09:37.362" level="INFO">${Contract_Number} = 00000211</msg>
+<status status="PASS" starttime="20210305 09:09:37.325" endtime="20210305 09:09:37.362"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Account_Loc}</arg>
+</arguments>
+<assign>
+<var>${Validate_Account}</var>
+</assign>
+<msg timestamp="20210305 09:09:37.394" level="INFO">${Validate_Account} = John Smith</msg>
+<status status="PASS" starttime="20210305 09:09:37.362" endtime="20210305 09:09:37.394"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Status_Loc}</arg>
+</arguments>
+<assign>
+<var>${Validate_Status}</var>
+</assign>
+<msg timestamp="20210305 09:09:37.428" level="INFO">${Validate_Status} = Draft</msg>
+<status status="PASS" starttime="20210305 09:09:37.394" endtime="20210305 09:09:37.428"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Validate_Term_Loc}</arg>
+</arguments>
+<assign>
+<var>${Validate_Term}</var>
+</assign>
+<msg timestamp="20210305 09:09:37.454" level="INFO">${Validate_Term} = 12</msg>
+<status status="PASS" starttime="20210305 09:09:37.428" endtime="20210305 09:09:37.454"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contract Number Is ${Contract_Number}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.454" level="INFO">Contract Number Is 00000211</msg>
+<status status="PASS" starttime="20210305 09:09:37.454" endtime="20210305 09:09:37.454"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:09:37.894" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:09:37.454" endtime="20210305 09:09:37.894"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Validate_Account}</arg>
+<arg>${Account}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:37.894" endtime="20210305 09:09:37.894"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contract is created for account ${Validate_Account}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.894" level="INFO">Contract is created for account John Smith</msg>
+<status status="PASS" starttime="20210305 09:09:37.894" endtime="20210305 09:09:37.894"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Validate_Status_Loc}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.894" level="INFO">Verifying element '//span[@title='Status']//following::span[1]' contains exact text 'Draft'.</msg>
+<status status="PASS" starttime="20210305 09:09:37.894" endtime="20210305 09:09:37.922"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Status of the Contract is ${Validate_Status}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.922" level="INFO">Status of the Contract is Draft</msg>
+<status status="PASS" starttime="20210305 09:09:37.922" endtime="20210305 09:09:37.922"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Validate_Term_Loc}</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.922" level="INFO">Verifying element '//span[@title='Contract Term (months)']//following::span[1]' contains exact text '12'.</msg>
+<status status="PASS" starttime="20210305 09:09:37.922" endtime="20210305 09:09:37.945"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Contract Term is ${Validate_Term}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.945" level="INFO">Contract Term is 12</msg>
+<status status="PASS" starttime="20210305 09:09:37.945" endtime="20210305 09:09:37.945"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:37.315" endtime="20210305 09:09:37.945"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:37.315" endtime="20210305 09:09:37.945"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:28.907" endtime="20210305 09:09:37.945"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:03.718" endtime="20210305 09:09:37.945"></status>
+</kw>
+<kw name="Renew Contract" library="Keywords">
+<doc>Complete Renew Contract flow to use in data driven template</doc>
+<arguments>
+<arg>24</arg>
+<arg>Signed</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Starting Test case with term ${Term} and Contract Status ${Contract_status}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:37.945" endtime="20210305 09:09:37.945"></status>
+</kw>
+<kw name="Go To Account Page" library="Keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${Account_URL}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:37.945" level="INFO">Opening url 'https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view'</msg>
+<status status="PASS" starttime="20210305 09:09:37.945" endtime="20210305 09:09:40.207"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${Account}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:40.208" endtime="20210305 09:09:40.256"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:37.945" endtime="20210305 09:09:40.256"></status>
+</kw>
+<kw name="Click on Renew Contract" library="Keywords">
+<doc>Click Renew Contract and validate the page loaded</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:40.258" endtime="20210305 09:09:42.634"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${Frame_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:42.634" level="INFO">Selecting frame '//iframe[@id='iFrameResizer0']'.</msg>
+<status status="PASS" starttime="20210305 09:09:42.634" endtime="20210305 09:09:42.685"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:42.685" endtime="20210305 09:09:43.376"></status>
+</kw>
+<msg timestamp="20210305 09:09:43.376" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:42.685" endtime="20210305 09:09:43.376"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${RenewContract}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:43.376" level="INFO">${element_xpath} = //a[contains(.,'Renew Contract')]</msg>
+<status status="PASS" starttime="20210305 09:09:43.376" endtime="20210305 09:09:43.376"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:43.376" level="INFO">Executing JavaScript:
+document.evaluate("//a[contains(.,'Renew Contract')]", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:43.376" endtime="20210305 09:09:43.387"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:44.398" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:43.387" endtime="20210305 09:09:44.398"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:43.376" endtime="20210305 09:09:44.398"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:09:44.398" endtime="20210305 09:09:44.404"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+<arg>timeout=20</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:44.404" endtime="20210305 09:09:44.425"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${ContractPage_Frame}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:44.425" level="INFO">Selecting frame '//iframe[@id='iFrameResizer1']'.</msg>
+<status status="PASS" starttime="20210305 09:09:44.425" endtime="20210305 09:09:44.885"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${Title_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:44.885" endtime="20210305 09:09:45.843"></status>
+</kw>
+<msg timestamp="20210305 09:09:45.851" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:44.885" endtime="20210305 09:09:45.851"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Log to Console</arg>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Inside page CREATE NEW CONTRACT"</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:45.851"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:45.851"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:40.256" endtime="20210305 09:09:45.851"></status>
+</kw>
+<kw name="Fill Contract Form" library="Keywords">
+<doc>Fill all required details to create contract with passed term and Status Value. If correct Values are passed next page will be loaded. Else Error will be thrown.</doc>
+<arguments>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//select[@name='loopname']/option[@value='${Term}']</arg>
+</arguments>
+<assign>
+<var>${Term_Value}</var>
+</assign>
+<msg timestamp="20210305 09:09:45.851" level="INFO">${Term_Value} = //select[@name='loopname']/option[@value='24']</msg>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:45.851"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+</arguments>
+<assign>
+<var>${Status_Loc}</var>
+</assign>
+<msg timestamp="20210305 09:09:45.851" level="INFO">${Status_Loc} = //input[@value='Signed']</msg>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:45.851"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:45.891"></status>
+</kw>
+<msg timestamp="20210305 09:09:45.891" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:45.891"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:45.891" level="INFO">${element_xpath} = //input[@id='ContractName']</msg>
+<status status="PASS" starttime="20210305 09:09:45.891" endtime="20210305 09:09:45.891"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:45.891" level="INFO">Executing JavaScript:
+document.evaluate("//input[@id='ContractName']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:45.891" endtime="20210305 09:09:45.904"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:46.911" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:45.904" endtime="20210305 09:09:46.911"></status>
+</kw>
+<msg timestamp="20210305 09:09:46.913" level="INFO">${status} = None</msg>
+<status status="PASS" starttime="20210305 09:09:45.891" endtime="20210305 09:09:46.913"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ContractName_Loc}</arg>
+<arg>${ContractName}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:46.913" level="INFO">Typing text 'Test_Contract' into text field '//input[@id='ContractName']'.</msg>
+<status status="PASS" starttime="20210305 09:09:46.913" endtime="20210305 09:09:47.048"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:47.048" level="INFO">Clicking element '//select[@name='loopname']'.</msg>
+<status status="PASS" starttime="20210305 09:09:47.048" endtime="20210305 09:09:47.211"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Term_Value}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:47.211" level="INFO">Clicking element '//select[@name='loopname']/option[@value='24']'.</msg>
+<status status="PASS" starttime="20210305 09:09:47.211" endtime="20210305 09:09:47.296"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//input[@value='${Contract_status}']</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:47.296" endtime="20210305 09:09:47.336"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${Status_Loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:47.344" level="INFO">${element_xpath} = //input[@value='Signed']</msg>
+<status status="PASS" starttime="20210305 09:09:47.336" endtime="20210305 09:09:47.344"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:47.344" level="INFO">Executing JavaScript:
+document.evaluate("//input[@value='Signed']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:47.344" endtime="20210305 09:09:47.364"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:48.368" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:47.364" endtime="20210305 09:09:48.368"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:47.336" endtime="20210305 09:09:48.368"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Done_Loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:48.368" level="INFO">Clicking element '//p[text()='Done']'.</msg>
+<status status="PASS" starttime="20210305 09:09:48.368" endtime="20210305 09:09:48.494"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait until element is visible</arg>
+<arg>${Error_loc}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Error_loc}</arg>
+</arguments>
+<status status="PASS" starttime="20210305 09:09:48.494" endtime="20210305 09:09:49.448"></status>
+</kw>
+<msg timestamp="20210305 09:09:49.448" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20210305 09:09:48.494" endtime="20210305 09:09:49.448"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>Error Validation</arg>
+<arg>ELSE</arg>
+<arg>Validate Contract</arg>
+<arg>${Term}</arg>
+<arg>${Contract_status}</arg>
+</arguments>
+<kw name="Error Validation" library="Keywords">
+<doc>Validate the error thrown while creating contract</doc>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Error_loc}</arg>
+</arguments>
+<assign>
+<var>${Error}</var>
+</assign>
+<msg timestamp="20210305 09:09:49.481" level="INFO">${Error} = Error : Please fix all the fields with errors.</msg>
+<status status="PASS" starttime="20210305 09:09:49.448" endtime="20210305 09:09:49.481"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Error}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:49.481" level="INFO">Error : Please fix all the fields with errors.</msg>
+<status status="PASS" starttime="20210305 09:09:49.481" endtime="20210305 09:09:49.481"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:09:49.884" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:09:49.481" endtime="20210305 09:09:49.884"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${alert-ok-button_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:49.884" level="INFO">Clicking element '//button[@id='alert-ok-button']'.</msg>
+<status status="PASS" starttime="20210305 09:09:49.884" endtime="20210305 09:09:49.983"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${error_message_loc}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:49.984" level="INFO">Verifying element '//div[@class='error']/small' contains exact text 'Choose a valid contract status and save your changes. Ask your admin for details.'.</msg>
+<status status="PASS" starttime="20210305 09:09:49.983" endtime="20210305 09:09:50.017"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${error_message_loc}</arg>
+</arguments>
+<assign>
+<var>${Validate Error Message}</var>
+</assign>
+<msg timestamp="20210305 09:09:50.034" level="INFO">${Validate Error Message} = Choose a valid contract status and save your changes. Ask your admin for details.</msg>
+<status status="PASS" starttime="20210305 09:09:50.017" endtime="20210305 09:09:50.034"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Error message is "${Validate Error Message}"</arg>
+</arguments>
+<msg timestamp="20210305 09:09:50.034" level="INFO">Error message is "Choose a valid contract status and save your changes. Ask your admin for details."</msg>
+<status status="PASS" starttime="20210305 09:09:50.034" endtime="20210305 09:09:50.034"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210305 09:09:50.387" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210305 09:09:50.034" endtime="20210305 09:09:50.387"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20210305 09:09:50.387" endtime="20210305 09:09:50.392"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:49.448" endtime="20210305 09:09:50.392"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:49.448" endtime="20210305 09:09:50.392"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:45.851" endtime="20210305 09:09:50.392"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:37.945" endtime="20210305 09:09:50.392"></status>
+</kw>
+<kw name="Logout and Close Browser" library="Keywords" type="teardown">
+<doc>General logout keyword for test teardowns</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${User_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:50.398" level="INFO">Current page contains element '//img[@title='User']'.</msg>
+<status status="PASS" starttime="20210305 09:09:50.392" endtime="20210305 09:09:50.398"></status>
+</kw>
+<kw name="Force click element" library="Keywords">
+<doc>Javascript Code to overcome the element interception issue</doc>
+<arguments>
+<arg>${User_loc}</arg>
+</arguments>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${elementToClick}</arg>
+<arg>\"</arg>
+<arg>\\\"</arg>
+</arguments>
+<assign>
+<var>${element_xpath}</var>
+</assign>
+<msg timestamp="20210305 09:09:50.398" level="INFO">${element_xpath} = //img[@title='User']</msg>
+<status status="PASS" starttime="20210305 09:09:50.398" endtime="20210305 09:09:50.398"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${element_xpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20210305 09:09:50.414" level="INFO">Executing JavaScript:
+document.evaluate("//img[@title='User']", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20210305 09:09:50.398" endtime="20210305 09:09:50.444"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210305 09:09:51.451" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210305 09:09:50.444" endtime="20210305 09:09:51.452"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:50.398" endtime="20210305 09:09:51.452"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${logout_loc}</arg>
+</arguments>
+<msg timestamp="20210305 09:09:51.452" level="INFO">Clicking element '//div[@class='profile-card-indent']/div/a[2]'.</msg>
+<status status="PASS" starttime="20210305 09:09:51.452" endtime="20210305 09:09:51.560"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210305 09:09:51.560" endtime="20210305 09:09:54.296"></status>
+</kw>
+<status status="PASS" starttime="20210305 09:09:50.392" endtime="20210305 09:09:54.296"></status>
+</kw>
+<doc>Includes both test cases to renew contract using Data Driven Technique</doc>
+<tags>
+<tag>Task</tag>
+</tags>
+<status status="PASS" starttime="20210305 09:08:56.923" endtime="20210305 09:09:54.296" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210305 09:07:16.200" endtime="20210305 09:09:54.296"></status>
+</suite>
+<status status="PASS" starttime="20210305 09:07:16.198" endtime="20210305 09:09:54.303"></status>
+</suite>
+<status status="PASS" starttime="20210305 09:07:16.172" endtime="20210305 09:09:54.303"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0">Task</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="RobotTests">RobotTests</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Tests">RobotTests.Tests</stat>
+<stat pass="3" fail="0" id="s1-s1-s1" name="TestCases">RobotTests.Tests.TestCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

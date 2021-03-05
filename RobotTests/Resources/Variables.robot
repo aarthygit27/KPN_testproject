@@ -1,5 +1,6 @@
 *** Variables ***
 
+#Data
 ${SalesForce_URL}           https://login.salesforce.com
 ${UserName}                 taniya.dey-1452066749@vlocityapps.com
 ${Password}                 Vlocity1234
@@ -7,6 +8,8 @@ ${Account_URL}              https://knowledge-web-14204.lightning.force.com/ligh
 ${Account}                  John Smith
 ${ContractName}             Test_Contract
 ${Browser}                  Chrome
+
+#Locators for Renew Contract
 
 ${UserName_Loc}             //input[@id='username']
 ${Password_Loc}             //input[@id='password']
