@@ -6,7 +6,7 @@ ${Password}                 Vlocity1234
 ${Account_URL}              https://knowledge-web-14204.lightning.force.com/lightning/r/Account/0014x000009sUZOAA2/view
 ${Account}                  John Smith
 ${ContractName}             Test_Contract
-${Browser}                  Firefox
+${Browser}                  Chrome
 
 ${UserName_Loc}             //input[@id='username']
 ${Password_Loc}             //input[@id='password']
