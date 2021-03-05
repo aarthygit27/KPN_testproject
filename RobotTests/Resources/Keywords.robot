@@ -39,7 +39,7 @@ Click on Renew Contract
     Wait until page contains element  ${ContractPage_Frame}    timeout=20
     Select frame    ${ContractPage_Frame}
     ${status}    Run Keyword And Return Status    Wait Until Element Is Enabled    ${Title_Loc}     10s
-    Run Keyword if   ${status}   Log to Console     "Inside page CREATE NEW CONTRACT"
+    Run Keyword if   ${status}   Log    "Inside page CREATE NEW CONTRACT"
 
 
 Fill Contract Form
